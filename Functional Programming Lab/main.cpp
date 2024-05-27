@@ -5,8 +5,6 @@
 #include <sstream>
 #include <algorithm>
 #include <unordered_map>
-#include <cctype>
-#include <iterator>
 using namespace std;
 
 // Non-pure
@@ -20,7 +18,7 @@ void print_pairs(vector <pair<int, string>> v) {
 vector <pair<int, string>> sort_by_frequency(vector <pair<int, string>> v) {
     sort(v.begin(), v.end(), [](const pair<int, string> &a, const pair<int, string> &b) {
         if (a.first != b.first) {
-            return a.second > b.second;
+            return a.first > b.first;
         }
         return a.second < b.second;
     });
