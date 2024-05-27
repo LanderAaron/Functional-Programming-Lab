@@ -9,6 +9,7 @@
 #include <iterator>
 using namespace std;
 
+// Non-pure
 void print_pairs(vector <pair<int, string>> v) {
     for (const auto &i : v) {
         cout << i.first << " " << i.second << endl;
@@ -44,7 +45,7 @@ unordered_map<string, int> count_occurences(vector<string> names) {
     return countOcurrence;
 }
 
-// Use transform and a for-loop; non-pure
+// Use transform and a for-loop; Pure
 vector<string> words(string text) {
     
     transform(text.begin(), text.end(), text.begin(), [](char c) {
